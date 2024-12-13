@@ -10,10 +10,10 @@
     <p>Please fill out this form with the required information</p>
     <form action="https://register-demo.freecodecamp.org" method="post">
         <fieldset>
-            <label for="first-name">Enter Your First Name: <input type="text" id="first-name" required></label>
-            <label for="last-name">Enter Your Last Name: <input type="text" id="last-name" required></label>
-            <label for="email">Enter Your Email: <input type="email" id="email" required></label>
-            <label for="new-password">Create a New Password: <input type="password" id="new-password" required pattern="[a-z0-5]{8,}"></label>
+            <label for="first-name">Enter Your First Name: <input name="first-name" type="text" id="first-name" required></label>
+            <label for="last-name">Enter Your Last Name: <input name="last-name" type="text" id="last-name" required></label>
+            <label for="email">Enter Your Email: <input name="email" type="email" id="email" required></label>
+            <label for="new-password">Create a New Password: <input name="new-password" type="password" id="new-password" required pattern="[a-z0-5]{8,}"></label>
         </fieldset>
         <fieldset>
             <legend>Account type (required)</legend>
@@ -21,10 +21,10 @@
             <label for="business-account"><input id="business-account" name="account-type" type="radio" /> Business</label>
         </fieldset>
         <fieldset>
-            <label><input type="file"> Upload a profile picture: </label>
-            <label><input type="number" min="13" max="120"> Input your age (years): </label>
-            <label> How did you hear about us?
-                <select>
+            <label for="profile-picture"><input name="profile-picture" id="profile-picture" type="file"> Upload a profile picture: </label>
+            <label for="age"><input name="age" id="age" type="number" min="13" max="120"> Input your age (years): </label>
+            <label for="referrer"> How did you hear about us?
+                <select name="referrer" id="referrer">
                     <option value="">(select one)</option>
                     <option value="1">freeCodeCamp News</option>
                     <option value="2">freeCodeCamp YouTube Channel</option>
@@ -32,9 +32,10 @@
                     <option value="4">Other</option>
                 </select>
             </label>
+            <label for="bio">Provide a bio:<textarea name="bio" rows="3" cols="30" placeholder="I like coding on the beach..." id="bio"></textarea></label>
         </fieldset>
-        <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
-        <input value="Submit" type="submit">
+        <label for="terms-and-conditions"><input name="terms-and-conditions" id="terms-and-conditions" type="checkbox" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+        <input name="submit" value="Submit" type="submit">
     </form>
 </body>
 </html>
