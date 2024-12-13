@@ -10,14 +10,14 @@
     <p id="description">Trying to know the popular anime</p>
     <form id="survey-form" action="mailto:hekaruri@gmail.com " enctype="text/plain" >
         <fieldset>
-            <label id="name-label" for="name"><input id="name" type="text" placeholder="Name"> Name: </label>
-            <label id="email-label" for="email"><input id="email" type="email" placeholder="Email"> Your email: </label>
-            <label for="age"><input id="age" min="12" max="120" type="number" placeholder="Age"></label>
-            <label id="number-label" for="number"><input id="number" type="number" placeholder="Number of anime"> Number of watching anime: </label>
+            <label id="name-label" for="name"><input id="name" type="text" placeholder="Name" required> Name: </label>
+            <label id="email-label" for="email"><input id="email" type="email" placeholder="Email" required> Your email: </label>
+            <label for="age"><input id="age" min="12" max="120" type="number" placeholder="Age" required></label>
+            <label id="number-label" for="number"><input min="1" max="5000" id="number" type="number" placeholder="Number of anime" required> Number of watching anime: </label>
         </fieldset>
         <fieldset>
             <label for="dropdown">Which option best describes your current role?
-                <select id="dropdown">
+                <select id="dropdown" required>
                     <option value="">Select current role</option>
                     <option value="1">Student</option>
                     <option value="2">Full-time job</option>
@@ -29,13 +29,13 @@
         </fieldset>
         <fieldset>
             <legend>Would you recommend Anime to a friend?</legend>
-            <label for="definitely"><input name="recommend" type="radio" id="definitely"> Definitely </label>
-            <label for="maybe"><input name="recommend" type="radio" id="maybe"> Maybe </label>
-            <label for="not-sure"><input name="recommend" type="radio" id="not-sure"> Not sure </label>
+            <label for="definitely"><input name="recommend" value="definitely" type="radio" id="definitely" checked> Definitely </label>
+            <label for="maybe"><input name="recommend" value="maybe" type="radio" id="maybe"> Maybe </label>
+            <label for="not-sure"><input name="recommend" value="not-sure" type="radio" id="not-sure"> Not sure </label>
         </fieldset>
         <fieldset>
             <legend>Which genres you like?</legend>
-            <label for="isekai"><input value="isekai" id="isekai" type="checkbox"> Isekai </label>
+            <label for="isekai"><input value="isekai" id="isekai" type="checkbox" checked> Isekai </label>
             <label for="mecha"><input value="mecha" id="mecha" type="checkbox"> Mecha </label>
             <label for="harem"><input value="harem" id="harem" type="checkbox"> Harem </label>
             <label for="yuri"><input value="yuri" id="yuri" type="checkbox"> Yuri </label>
@@ -43,10 +43,11 @@
             <label for="sports"><input value="sports" id="sports" type="checkbox"> Sports </label>
         </fieldset>
         <fieldset>
-            <label for="comments">
+            <label for="comments">Any comments or suggestions?
                 <textarea id="comments" placeholder="Enter your comment here..."></textarea>
             </label>
         </fieldset>
+        <input name="submit" value="Submit" id="submit" type="submit">
     </form>
 </body>
 </html>
